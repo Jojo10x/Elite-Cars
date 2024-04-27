@@ -1,11 +1,25 @@
 #footer {
-    background-color: var(--black-color);
+    background-image: linear-gradient(-45deg, #000000 0%, #485563 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
     @include padding-y(3rem, 2rem);
+    color: #E8C547;
 
     .separator {
         @include margin-y(2.5rem, 2rem);
         opacity: 0.7;
     }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .footer_wrapper {
