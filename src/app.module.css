@@ -4,33 +4,69 @@
 .slider {
     width: fit-content;
     height: 350px;
+    margin: 0 auto;
   }
 
+  .slider video{
+    
+  }
+  .animate-slide .video-box {
+    animation: slideIn 0.5s ease; /* Slide-in animation */
+  }
   
-  .video-container-wrapper {
-    height: 400px; /* Set a fixed height for the container */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
+  
+  .video-carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px; 
+   
   }
-
   
   .video-container {
-    flex-wrap: nowrap;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    overflow: hidden;
     width: 100%;
-    height: 80%; /* Adjust the height as needed */
+    height: 100%; 
     gap: 20px;
+
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .video-box {
-    width: 220px; /* Adjust the width as needed */
-    border: 1px solid #ccc; /* Just for demonstration */
-    transition: transform 0.3s ease;
+    width: 300px; /* Each video takes one-third of the container width */
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: width 0.3s ease; /* Add transition effect to the width property */
+    animation: slideIn 0.5s ease;
+  }
+  @media screen and (max-width: 660px) {
+    .video-box {
+      width: calc(50% - 10px); /* If the screen width is less than 660px, each video takes half of the container width minus margins */
+    }
+  }
+  
+  @media screen and (max-width: 440px) {
+    .video-box {
+      width: calc(100% - 10px); /* If the screen width is less than 440px, each video takes full width minus margins */
+    }
   }
   
   .video-box.active {
     transform: scale(1.1);
-    border-color: blue; /* Just for demonstration */
+    /* border-color: blue; */
   }
   .video-box.actived{
     width: 30%; /* Adjust the width as needed */
@@ -55,13 +91,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 90px;
+    margin-bottom: 40px;
   }
   
   .controls button {
-    padding: 5px 10px;
-    background-color: #ccc;
+    background-color: #007bff;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
@@ -101,4 +141,18 @@
     cursor: pointer;
     font-size: 18px;
     color: #888;
+  }
+
+  .video-box p {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 5px 10px; /* Add padding around the text */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center-align the text */
   }

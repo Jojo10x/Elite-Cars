@@ -1,39 +1,42 @@
 // Slider.js
 
-import { useState, useEffect,useRef } from 'react';
-import videoBg from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4'
-import videoA from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/barbus.mp4'
-import videoP from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/pagani.mp4'
-import videoBMW from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/bmw.mp4'
-import videoD from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/por.mp4'
-import videoB from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/vid.mp4'
-import styles from  "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/app.module.css"
+import { useState, useEffect, useRef } from "react";
+import videoBg from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4";
+import videoA from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/barbus.mp4";
+import videoP from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/pagani.mp4";
+import videoBMW from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/bmw.mp4";
+import videoD from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/por.mp4";
+import videoB from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/vid.mp4";
+import styles from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/app.module.css";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [buttonClicked, setButtonClicked] = useState(false); 
+  const [buttonClicked, setButtonClicked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalVideoIndex, setModalVideoIndex] = useState(0);
   const videos = [
-    videoBg,
-    videoB,
-    videoD,
-    videoBMW,
-    videoP,
-    videoA
+    { src: videoBg, text: "Lamborghini" },
+    { src: videoB, text: "Rolls Royce" },
+    { src: videoD, text: "Porsche" },
+    { src: videoBMW, text: "BMW " },
+    { src: videoP, text: "Pagani" },
+    { src: videoA, text: "G-Wagon" },
   ];
 
   const modalRef = useRef(null);
 
-
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === videos.length - 1 ? 0 : prevIndex + 1));
-    setButtonClicked(true); // Set buttonClicked to true when nextSlide is called
+    setCurrentIndex((prevIndex) =>
+      prevIndex === videos.length - 1 ? 0 : prevIndex + 1
+    );
+    setButtonClicked(true);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? videos.length - 1 : prevIndex - 1));
-    setButtonClicked(true); // Set buttonClicked to true when prevSlide is called
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? videos.length - 1 : prevIndex - 1
+    );
+    setButtonClicked(true);
   };
 
   const openModal = (index) => {
@@ -47,8 +50,8 @@ const Slider = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setButtonClicked(false); // Reset buttonClicked state after 3 seconds
-    }, 2000); // Adjust the duration as needed
+      setButtonClicked(false); 
+    }, 2000); 
 
     return () => clearTimeout(timeoutId);
   }, [buttonClicked]);
@@ -59,28 +62,35 @@ const Slider = () => {
     }
   };
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
     <>
       <div className={styles.slider}>
-        <div className={styles["video-container"]}>
-          {videos.map((video, index) => (
-            <div
-              key={index}
-              className={`${styles["video-box"]} ${
-                index === currentIndex && buttonClicked ? styles.active : ""
-              }`}
-              onClick={() => openModal(index)}
-            >
-              <video src={video} autoPlay loop muted />
-            </div>
-          ))}
+        <div className={styles["video-carousel"]}>
+          <div className={styles["video-container"]}>
+            {[
+              videos[(currentIndex - 1 + videos.length) % videos.length],
+              videos[currentIndex],
+              videos[(currentIndex + 1) % videos.length],
+            ].map((item, index) => (
+              <div
+                key={index}
+                className={`${styles["video-box"]}`}
+                onClick={() =>
+                  openModal((currentIndex + index) % videos.length)
+                }
+              >
+                <video src={item.src} autoPlay loop muted />
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
         {isModalOpen && (
           <>
@@ -89,7 +99,7 @@ const Slider = () => {
             </button>
             <div className={styles.modal}>
               <div ref={modalRef} className={styles["modal-content"]}>
-                <video src={videos[modalVideoIndex]} autoPlay controls />
+                <video src={videos[modalVideoIndex].src} autoPlay controls />
               </div>
             </div>
           </>
@@ -107,6 +117,5 @@ const Slider = () => {
 };
 
 export default Slider;
-
 
 // https://codepen.io/FrontEndHenry/pen/jOdBeVR
