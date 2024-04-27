@@ -15,12 +15,12 @@ const Slider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalVideoIndex, setModalVideoIndex] = useState(0);
   const videos = [
-    { src: videoBg, text: "Lamborghini" },
-    { src: videoB, text: "Rolls Royce" },
-    { src: videoD, text: "Porsche" },
-    { src: videoBMW, text: "BMW " },
-    { src: videoP, text: "Pagani" },
-    { src: videoA, text: "G-Wagon" },
+    { index: 0, src: videoBg, text: "Lamborghini" },
+    { index: 1, src: videoB, text: "Rolls Royce" },
+    { index: 2, src: videoD, text: "Porsche" },
+    { index: 3, src: videoBMW, text: "BMW " },
+    { index: 4, src: videoP, text: "Pagani" },
+    { index: 5, src: videoA, text: "G-Wagon" },
   ];
 
   const modalRef = useRef(null);
@@ -69,25 +69,27 @@ const Slider = () => {
     };
   }, []);
 
+  const generateCarouselIndexes = () => {
+    const indexes = [];
+    for (let i = currentIndex; i < currentIndex + 3; i++) {
+      indexes.push(i % videos.length);
+    }
+    return indexes;
+  };
+
   return (
     <>
       <div className={styles.slider}>
         <div className={styles["video-carousel"]}>
           <div className={styles["video-container"]}>
-            {[
-              videos[(currentIndex - 1 + videos.length) % videos.length],
-              videos[currentIndex],
-              videos[(currentIndex + 1) % videos.length],
-            ].map((item, index) => (
+          {generateCarouselIndexes().map((index) => (
               <div
                 key={index}
                 className={`${styles["video-box"]}`}
-                onClick={() =>
-                  openModal((currentIndex + index) % videos.length)
-                }
+                onClick={() => openModal(index)}
               >
-                <video src={item.src} autoPlay loop muted />
-                <p>{item.text}</p>
+                <video src={videos[index].src} autoPlay loop muted />
+                <p>{videos[index].text}</p>
               </div>
             ))}
           </div>
