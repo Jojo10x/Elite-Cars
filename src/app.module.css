@@ -96,12 +96,13 @@
   }
   
   .controls button {
-    background-color: #007bff;
-    color: white;
+    background-color: #FFD700;
+    color: #192A56;
     border: none;
     padding: 10px 20px;
     margin: 0 5px;
     border-radius: 5px;
+    text-transform: uppercase;
     cursor: pointer;
   }
   

@@ -1,39 +1,39 @@
 const reviewsData = [
     {
         id: 1,
-        name: "Atharva Kumar",
-        date: "4 Aug 2022",
-        review: "Sound is awesome and as I expected, love it.",
+        name: "Michael Thompson",
+        date: "4 Aug 2024",
+        review: "Exceptional performance and luxurious comfort. The handling is superb, and the interior design is breathtaking.",
         rateCount: 5,
     },
     {
         id: 2,
-        name: "Ritika Sen",
-        date: "15 July 2022",
-        review: "Very good and awesome product",
+        name: "Emily White",
+        date: "15 July 2024",
+        review: "A masterpiece of engineering. Every detail exudes elegance and sophistication.",
         rateCount: 5,
     },
     {
         id: 3,
-        name: "Bhavesh Joshi",
-        date: "10 June 2022",
-        review: "Super amazing product !!!",
+        name: "Jonathan Taylor",
+        date: "10 June 2024",
+        review: "Absolutely stunning. The power and refinement of this car are unparalleled.",
         rateCount: 4,
     },
     {
         id: 4,
-        name: "Anandi Gupta",
-        date: "6 May 2022",
-        review: "Great NC, sound is a bit flat",
+        name: "Sophia Patel",
+        date: "6 May 2024",
+        review: "Impressive performance, though I expected a bit more in terms of interior technology.",
         rateCount: 4,
     },
     {
         id: 5,
-        name: "Arif Khan",
-        date: "27 April 2022",
-        review: "Very good but still has flaws!",
+        name: "David Lee",
+        date: "27 April 2024",
+        review: "Overall a great experience, but there are minor flaws that could be improved in future models.",
         rateCount: 3,
     },
-]
+];
 
 export default reviewsData;
