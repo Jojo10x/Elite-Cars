@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="wrapper footer_wrapper">
                     <div className="foot_about">
                         <h2>
-                            <Link to="/">Elite Cars</Link>
+                            <Link to="/"  className="brand-logo">Elite Cars</Link>
                         </h2>
                         <div className="foot_subs">
                             <p>Subscribe to our Email alerts to receive updates on new hypercars</p>
