@@ -110,7 +110,7 @@ const Slider = () => {
       <div className={styles.controls}>
         <button onClick={prevSlide}>Previous</button>
         <span>
-          {currentIndex + 1} / {videos.length}
+          {/* {currentIndex + 1} / {videos.length} */}
         </span>
         <button onClick={nextSlide}>Next</button>
       </div>
