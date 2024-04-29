@@ -63,6 +63,12 @@ const cartReducer = (state, action) => {
                 }).filter(item => item.quantity !== 0)
             };
 
+            case 'CLEAR_CART': 
+            return {
+                ...state,
+                cartItems: []
+            };
+
 
         default:
             return state;

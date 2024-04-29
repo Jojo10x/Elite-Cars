@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { TbTrash } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import { displayMoney } from '../../helpers/utils';
@@ -21,7 +21,7 @@ const CartItem = (props) => {
             <div className="cart_item">
                 <figure className="cart_item_img">
                     <Link to={`${path}${id}`}>
-                        <img src={images[0]} alt="product-img" />
+                        <img src={images[1]} alt="product-img" />
                     </Link>
                 </figure>
                 <div className="cart_item_info">
