@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { BsCartX } from 'react-icons/bs';
 import { calculateTotal, displayMoney } from '../helpers/utils';
 import useDocTitle from '../hooks/useDocTitle';
@@ -67,7 +67,7 @@ const Cart = () => {
                                     <div className="order_summary">
                                         <h3>
                                             Order Summary &nbsp;
-                                            ( {cartQuantity} {cartQuantity > 1 ? 'items' : 'item'} )
+                                            ( {cartQuantity} {cartQuantity > 1 ? 'cars' : 'car'} )
                                         </h3>
                                         <div className="order_summary_details">
                                             <div className="price">
