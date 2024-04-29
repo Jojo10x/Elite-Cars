@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext,useState } from 'react';
 import { BsCartX } from 'react-icons/bs';
 import { calculateTotal, displayMoney } from '../helpers/utils';
 import useDocTitle from '../hooks/useDocTitle';
@@ -11,7 +11,9 @@ const Cart = () => {
 
     useDocTitle('Cart');
 
-    const { cartItems } = useContext(cartContext);
+    const [showModal, setShowModal] = useState(false);
+    const { cartItems, clearCart  } = useContext(cartContext);
+    
 
     const cartQuantity = cartItems.length;
 
@@ -36,6 +38,19 @@ const Cart = () => {
     // final total amount
     const totalAmount = calculateCartTotal - calculateCartDiscount;
     const displayTotalAmount = displayMoney(totalAmount);
+
+    const handleCheckout = () => {
+        setShowModal(true);
+        // Additional logic for any checkout processes can be added here
+        console.log("clicked")
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        clearCart(); // Assuming clearCart is a function to clear the cart items
+        
+    };
+
 
 
     return (
@@ -88,7 +103,7 @@ const Cart = () => {
                                                 <b>{displayTotalAmount}</b>
                                             </div>
                                         </div>
-                                        <button type="button" className="btn checkout_btn">Checkout</button>
+                                        <button type="button" className="btn checkout_btn"  onClick={handleCheckout}>Checkout</button>
                                     </div>
                                 </div>
                             </div>
@@ -96,6 +111,16 @@ const Cart = () => {
                     }
                 </div>
             </section>
+            {showModal && (
+                <div className="modal">
+                    <div className="modal_content">
+                        <span className="close" onClick={handleCloseModal}>
+                            &times;
+                        </span>
+                        <p>Thank you for your purchase!</p>
+                    </div>
+                </div>
+            )}
         </>
     );
 };
