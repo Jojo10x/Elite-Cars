@@ -1,4 +1,5 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 export const footMenu = [
   {
@@ -94,6 +95,37 @@ export const footMenu = [
       },
     ],
   },
+  {
+    id: 4,
+    title: "Elite Cars",
+    menu: [
+      {
+        id: 1,
+        link: "Latest Models",
+        path: "/",
+      },
+      {
+        id: 2,
+        link: "Performance Specs",
+        path: "/",
+      },
+      {
+        id: 3,
+        link: "Customization Options",
+        path: "/",
+      },
+      {
+        id: 4,
+        link: "Ownership Benefits",
+        path: "/",
+      },
+      {
+        id: 5,
+        link: "Exclusive Deals",
+        path: "/",
+      },
+    ],
+  },
 ];
 
 
@@ -105,7 +137,7 @@ export const footSocial = [
     },
     {
         id: 2,
-        icon: FaTwitter(),
+        icon: FaXTwitter(),
         path: "/",
     },
     {

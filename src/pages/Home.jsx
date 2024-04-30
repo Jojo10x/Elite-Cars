@@ -5,6 +5,7 @@ import FullScreenVideo from '../components/common/Video';
 import Slider from '../components/sliders/VideoSlider';
 import { Link } from 'react-router-dom';
 import 'swiper/scss';
+import NewsLetter from '../components/common/NewsLetter';
 
 const Home = () => {
 
@@ -32,6 +33,7 @@ const Home = () => {
         </section>
 
         <Services />
+        <NewsLetter/>
       </main>
     );
 };
