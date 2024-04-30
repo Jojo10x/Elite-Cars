@@ -1,17 +1,8 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { footMenu, footSocial } from '../../data/footerData';
 
 
 const Footer = () => {
-
-    const [subValue, setSubValue] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSubValue('');
-        alert('Thankyou, you are subscribed to receive our daily newsletter');
-    };
 
     const currYear = new Date().getFullYear();
 
@@ -26,28 +17,6 @@ const Footer = () => {
         <div className="separator"></div>
         <div className="container">
           <div className="wrapper footer_wrapper">
-            <div className="foot_about">
-              <div className="foot_subs">
-                <p>
-                  Subscribe to our Email alerts to receive updates on new
-                  hypercars
-                </p>
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="email"
-                    className="input_field"
-                    placeholder="Email Address*"
-                    required
-                    value={subValue}
-                    onChange={(e) => setSubValue(e.target.value)}
-                  />
-                  <button type="submit" className="btn">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-
             {footMenu.map((item) => {
               const { id, title, menu } = item;
               return (

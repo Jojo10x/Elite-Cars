@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import ProductDetails from '../pages/ProductDetails';
 import ErrorPage from '../pages/ErrorPage';
 import Gallery from '../pages/Gallery';
+import VideoPage from '../pages/VideoPage';
 
 const RouterRoutes = () => {
 
@@ -16,6 +17,7 @@ const RouterRoutes = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/newsletter" element={<VideoPage />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/all-products" element={<AllProducts />} />
                 <Route path="/product-details/:productId" element={<ProductDetails />} />
