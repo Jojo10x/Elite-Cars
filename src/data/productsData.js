@@ -2,10 +2,9 @@ const productsData = [
     {
         id: 1,
         tag: "hero-product",
-        tagline: "Keep the noise out, or in. You choose.",
         heroImage: "/images/products/RRLOGO.png",
         images: [
-            "/images/products/RRLOGO.png",
+            "/images/products/RR.png",
             "/images/products/spec1.webp",
             "/images/products/spec2.webp",
             "/images/products/spec3.jpeg",
@@ -26,7 +25,7 @@ const productsData = [
         id: 2,
         tag: "featured-product",
         images: [
-            "/images/products/RRLOGO.png",
+            "/images/products/RR.png",
             "/images/products/ross11.webp",
             "/images/products/Ross111.webp",
             "/images/products/ross1111.webp",
@@ -45,10 +44,9 @@ const productsData = [
     {
         id: 3,
         tag: "hero-product",
-        tagline: "Featherweight for comfort all-day.",
         heroImage: "/images/products/RRLOGO.png",
         images: [
-            "/images/products/RRLOGO.png",
+            "/images/products/RR.png",
             "/images/products/gg1.webp",
             "/images/products/gg2.webp",
             "/images/products/gg3.webp",
@@ -68,7 +66,7 @@ const productsData = [
     {
         id: 4,
         images: [
-            "/images/products/RRLOGO.png",
+            "/images/products/RR.png",
             "/images/products/cu1.webp",
             "/images/products/cu2.webp",
             "/images/products/cu3.webp",
@@ -88,7 +86,7 @@ const productsData = [
     {
         id: 5,
         images: [
-            "/images/products/lambo.png",
+            "/images/products/bull.png",
             "/images/products/urus1.jpeg",
             "/images/products/urus2.jpeg",
             "/images/products/urus4.jpeg",
@@ -108,7 +106,7 @@ const productsData = [
     {
         id: 6,
         images: [
-            "/images/products/lambo.png",
+            "/images/products/bull.png",
             "/images/products/ur1.jpeg",
             "/images/products/ur2.jpeg",
             "/images/products/ur3.jpeg",
@@ -128,10 +126,9 @@ const productsData = [
     {
         id: 7,
         tag: "hero-product",
-        tagline: "Give your favourite music a boost.",
         heroImage: "/images/products/logobra.webp",
         images: [
-            "/images/products/logobra.webp",
+            "/images/products/brabuss.png",
             "/images/products/bra1.jpeg",
             "/images/products/bra2.jpeg",
             "/images/products/bra3.jpeg",
@@ -152,7 +149,7 @@ const productsData = [
         id: 8,
         tag: "featured-product",
         images: [
-            "/images/products/logobra.webp",
+            "/images/products/brabuss.png",
             "/images/products/braa1.jpeg",
             "/images/products/braa2.jpeg",
             "/images/products/braa3.jpeg",
@@ -173,7 +170,7 @@ const productsData = [
         id: 9,
         tag: "featured-product",
         images: [
-            "/images/products/po1.png",
+            "/images/products/Porr.png",
             "/images/products/por1.webp",
             "/images/products/por2.webp",
             "/images/products/por3.webp",
@@ -193,7 +190,7 @@ const productsData = [
     {
         id: 10,
         images: [
-            "/images/products/po1.png",
+            "/images/products/Porr.png",
             "/images/products/cay1.webp",
             "/images/products/cay2.webp",
             "/images/products/cay3.webp",
@@ -213,7 +210,7 @@ const productsData = [
     {
         id: 11,
         images: [
-            "/images/products/pag11.png",
+            "/images/products/PL3.png",
             "/images/products/pag1.jpg",
             "/images/products/pag2.jpg",
             "/images/products/pag3.jpg",
@@ -253,7 +250,7 @@ const productsData = [
     },{
         id: 13,
         images: [
-            "/images/products/BMW.svg.png",
+            "/images/products/BBMW.webp",
             "/images/products/bi1.jpg",
             "/images/products/bi2.jpg",
             "/images/products/bi3.jpg",
