@@ -31,7 +31,6 @@
     width: 100%;
     height: 100%; 
     gap: 20px;
-
   }
   @keyframes slideIn {
     from {
@@ -51,17 +50,6 @@
     box-sizing: border-box;
     transition: width 0.3s ease; 
     animation: slideIn 0.5s ease;
-  }
-  @media screen and (max-width: 660px) {
-    .video-box {
-      width: calc(50% - 10px); 
-    }
-  }
-  
-  @media screen and (max-width: 440px) {
-    .video-box {
-      width: calc(100% - 10px); 
-    }
   }
   
   .video-box.active {
@@ -157,3 +145,4 @@
     font-weight: bold;
     text-align: center; 
   }
+

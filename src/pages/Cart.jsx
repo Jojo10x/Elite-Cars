@@ -41,14 +41,12 @@ const Cart = () => {
 
     const handleCheckout = () => {
         setShowModal(true);
-        // Additional logic for any checkout processes can be added here
         console.log("clicked")
     };
 
     const handleCloseModal = () => {
         setShowModal(false);
-        clearCart(); // Assuming clearCart is a function to clear the cart items
-        
+        clearCart();    
     };
 
 
