@@ -86,7 +86,7 @@ const productsData = [
     {
         id: 5,
         images: [
-            "/images/products/urus.png",
+            "/images/products/bull.png",
             "/images/products/urus1.jpeg",
             "/images/products/urus2.jpeg",
             "/images/products/urus4.jpeg",
@@ -106,7 +106,7 @@ const productsData = [
     {
         id: 6,
         images: [
-            "/images/products/urus.png",
+            "/images/products/bull.png",
             "/images/products/ur1.jpeg",
             "/images/products/ur2.jpeg",
             "/images/products/ur3.jpeg",
