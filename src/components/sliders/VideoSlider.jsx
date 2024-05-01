@@ -1,5 +1,3 @@
-// Slider.js
-
 import { useState, useEffect, useRef } from "react";
 import videoBg from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4";
 import videoA from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/barbus.mp4";
@@ -7,7 +5,7 @@ import videoP from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/a
 import videoBMW from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/bmw.mp4";
 import videoD from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/por.mp4";
 import videoB from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/vid.mp4";
-import styles from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/app.module.css";
+// import styles from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/app.module.css";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,13 +77,13 @@ const Slider = () => {
 
   return (
     <>
-      <div className={styles.slider}>
-        <div className={styles["video-carousel"]}>
-          <div className={styles["video-container"]}>
+      <div className="slider">
+        <div className="video-carousel">
+          <div className="video-container">
           {generateCarouselIndexes().map((index) => (
               <div
                 key={index}
-                className={`${styles["video-box"]}`}
+                className="video-box"
                 onClick={() => openModal(index)}
               >
                 <video src={videos[index].src} autoPlay loop muted />
@@ -96,18 +94,18 @@ const Slider = () => {
         </div>
         {isModalOpen && (
           <>
-            <button className={styles.close} onClick={closeModal}>
+            <button className="close" onClick={closeModal}>
               Close
             </button>
-            <div className={styles.modal}>
-              <div ref={modalRef} className={styles["modal-content"]}>
+            <div className="modal">
+              <div ref={modalRef} className="modal-content">
                 <video src={videos[modalVideoIndex].src} autoPlay controls />
               </div>
             </div>
           </>
         )}
       </div>
-      <div className={styles.controls}>
+      <div className="controls">
         <button onClick={prevSlide}>Previous</button>
         <span>
           {/* {currentIndex + 1} / {videos.length} */}
