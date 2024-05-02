@@ -5,7 +5,6 @@ import videoP from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/a
 import videoBMW from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/bmw.mp4";
 import videoD from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/por.mp4";
 import videoB from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/vid.mp4";
-// import styles from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/app.module.css";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -117,5 +116,3 @@ const Slider = () => {
 };
 
 export default Slider;
-
-// https://codepen.io/FrontEndHenry/pen/jOdBeVR
