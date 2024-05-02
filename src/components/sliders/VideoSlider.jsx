@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import videoBg from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4";
-import videoA from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/barbus.mp4";
-import videoP from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/pagani.mp4";
-import videoBMW from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/bmw.mp4";
-import videoD from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/por.mp4";
-import videoB from "/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/vid.mp4";
+import videoBg from "../../assets/lambo.mp4";
+import videoA from "../../assets/barbus.mp4";
+import videoP from "../../assets/pagani.mp4";
+import videoBMW from "../../assets/bmw.mp4";
+import videoD from "../../assets/por.mp4";
+import videoB from "../../assets/vid.mp4";
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

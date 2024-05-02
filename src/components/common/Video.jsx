@@ -1,5 +1,4 @@
-import videoBg from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4'
-
+import videoBg from "../../assets/lambo.mp4";
 
 const FullScreenVideo = () => {
 
