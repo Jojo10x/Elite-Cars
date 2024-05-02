@@ -1,6 +1,6 @@
 import {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import videoBg from '/Users/joey/Desktop/BestJob/Mine/E-com/Luxcars/Luxcars/src/assets/lambo.mp4'
+import videoBg from '../assets/lambo.mp4'
 
 const VideoPage = () => {
   const [showModal, setShowModal] = useState(true);
