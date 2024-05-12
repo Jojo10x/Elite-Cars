@@ -77,7 +77,7 @@ const ProductDetails = () => {
                         className={`tabs_item ${activeClass(i)}`}
                         onClick={() => handlePreviewImg(i)}
                       >
-                        <img src={img} alt="product-img" />
+                        <img src={img} alt="product-img" loading="lazy" />
                       </div>
                     ) : null 
                   )}

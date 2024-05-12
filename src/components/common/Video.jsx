@@ -12,7 +12,7 @@ const FullScreenVideo = () => {
   return (
     <>
       <div className="overlay"></div>
-      <video src={videoBg} autoPlay loop muted />
+      <video src={videoBg} autoPlay loop muted loading="lazy"/>
       <div className="content">
         <h1 className='featured_header' >Elite Car Hub</h1>
         <p className='featured_header' >Explore Our Exquisite Hyper Cars Collection</p>

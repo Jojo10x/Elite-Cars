@@ -85,7 +85,7 @@ const Slider = () => {
                 className="video-box"
                 onClick={() => openModal(index)}
               >
-                <video src={videos[index].src} autoPlay loop muted />
+                <video src={videos[index].src} autoPlay loop muted loading="lazy" />
                 <p>{videos[index].text}</p>
               </div>
             ))}
@@ -98,7 +98,7 @@ const Slider = () => {
             </button>
             <div className="modal">
               <div ref={modalRef} className="modal-content">
-                <video src={videos[modalVideoIndex].src} autoPlay controls />
+                <video src={videos[modalVideoIndex].src} autoPlay controls loading="lazy"/>
               </div>
             </div>
           </>

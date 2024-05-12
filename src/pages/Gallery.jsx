@@ -30,6 +30,7 @@ const Gallery = () => {
             <img
                  src={product.images[1]} 
                  alt={`Product ${product.id}`}
+                 loading="lazy"
                 
             />
             </div>

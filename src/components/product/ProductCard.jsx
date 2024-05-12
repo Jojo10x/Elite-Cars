@@ -35,7 +35,7 @@ const ProductCard = (props) => {
             <div className="card products_card">
                 <figure className="products_img">
                     <Link to={`${path}${id}`}>
-                        <img src={images[0]} alt="product-img" />
+                        <img src={images[0]} alt="product-img" loading="lazy" />
                     </Link>
                 </figure>
                 <div className="products_details">

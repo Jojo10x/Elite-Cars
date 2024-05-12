@@ -22,7 +22,7 @@ const VideoPage = () => {
     <>
        
         <div className="content_news">
-        <video src={videoBg} autoPlay loop muted />
+        <video src={videoBg} autoPlay loop muted loading="lazy"/>
           <div className="container">
             {showModal && (
               <div className="modal_news">
