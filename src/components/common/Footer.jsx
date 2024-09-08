@@ -45,8 +45,8 @@ const Footer = () => {
             <div className="sub_footer_wrapper">
               <div className="foot_copyright">
                 <p>
-                  {currYear} | Elite Cars. All Rights Reserved. Built by |{" "}
-                  <a href="https://joelkasisi.netlify.app/">Joel Kasisi</a>
+                  {currYear} | Elite Cars. All Rights Reserved. <a href="https://pixeltochka.tech/">Powered by{" "}
+                  PT</a>
                 </p>
               </div>
               <div className="foot_social">
